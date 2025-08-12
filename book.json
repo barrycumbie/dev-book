@@ -1,0 +1,15 @@
+{
+  "title": "CIS 376 Web Development",
+  "author": "Barry Cumbie, Ph.D.",
+  "description": "Course content, assignments, rubrics, and resources for CIS 376.",
+  "plugins": [
+    "anchors",
+    "search",
+    "github"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/your-username/cis376-gitbook"
+    }
+  }
+}
