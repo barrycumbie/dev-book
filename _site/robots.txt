@@ -1,1 +1,0 @@
-Sitemap: http://localhost:4000/dev-book/sitemap.xml
