@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📄 Markdown Basics | CIS 376 Web Development</title>
+    <meta name="description" content="What is Markdown? Markdown is a lightweight markup language that allows you to format text using simple syntax. GitHub uses a variant called GitHub-Flavored ...">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/dev-book/assets/css/main.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>📄 Markdown Basics | CIS 376 Web Development</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="📄 Markdown Basics" />
+<meta name="author" content="Barry Cumbie, Ph.D." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What is Markdown? Markdown is a lightweight markup language that allows you to format text using simple syntax. GitHub uses a variant called GitHub-Flavored Markdown (GFM) that includes additional features." />
+<meta property="og:description" content="What is Markdown? Markdown is a lightweight markup language that allows you to format text using simple syntax. GitHub uses a variant called GitHub-Flavored Markdown (GFM) that includes additional features." />
+<link rel="canonical" href="http://localhost:4000/dev-book/resources/markdown-basics/" />
+<meta property="og:url" content="http://localhost:4000/dev-book/resources/markdown-basics/" />
+<meta property="og:site_name" content="CIS 376 Web Development" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-14T10:48:04-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="📄 Markdown Basics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Barry Cumbie, Ph.D."},"dateModified":"2025-08-14T10:48:04-05:00","datePublished":"2025-08-14T10:48:04-05:00","description":"What is Markdown? Markdown is a lightweight markup language that allows you to format text using simple syntax. GitHub uses a variant called GitHub-Flavored Markdown (GFM) that includes additional features.","headline":"📄 Markdown Basics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/dev-book/resources/markdown-basics/"},"url":"http://localhost:4000/dev-book/resources/markdown-basics/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/dev-book/">
+                <i class="fas fa-code me-2"></i>CIS 376
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/syllabus/">Syllabus</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/calendar/">Calendar</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/assignments/">Assignments</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/lessons/">Lessons</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/resources/">Resources</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/exams/">Exams</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <article class="resource-content">
+    <h1>📄 Markdown Basics</h1>
+    
+    <p class="lead">GitHub-Flavored Markdown essentials</p>
+    
+
+    
+    <div class="mb-3">
+        <span class="badge bg-secondary">Documentation</span>
+    </div>
+    
+
+    <div class="content">
+        <h2 id="what-is-markdown">What is Markdown?</h2>
+<p>Markdown is a lightweight markup language that allows you to format text using simple syntax. GitHub uses a variant called <strong>GitHub-Flavored Markdown (GFM)</strong> that includes additional features.</p>
+
+<h2 id="basic-syntax">Basic Syntax</h2>
+
+<h3 id="headers">Headers</h3>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># H1 Header</span>
+<span class="gu">## H2 Header</span>
+<span class="gu">### H3 Header</span>
+<span class="gu">#### H4 Header</span>
+<span class="gu">##### H5 Header</span>
+<span class="gu">###### H6 Header</span>
+</code></pre></div></div>
+
+<h3 id="text-formatting">Text Formatting</h3>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gs">**Bold text**</span>
+<span class="ge">*Italic text*</span>
+<span class="gs">***Bold and italic**</span><span class="err">*</span>
+~~Strikethrough~~
+<span class="sb">`Inline code`</span>
+</code></pre></div></div>
+
+<h3 id="lists">Lists</h3>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Unordered list:
+<span class="p">-</span> Item 1
+<span class="p">-</span> Item 2
+<span class="p">  -</span> Sub-item A
+<span class="p">  -</span> Sub-item B
+
+Ordered list:
+<span class="p">1.</span> First item
+<span class="p">2.</span> Second item
+<span class="p">3.</span> Third item
+</code></pre></div></div>
+
+<h3 id="links-and-images">Links and Images</h3>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nv">Link text</span><span class="p">](</span><span class="sx">https://example.com</span><span class="p">)</span>
+<span class="p">[</span><span class="nv">Link with title</span><span class="p">](</span><span class="sx">https://example.com</span> <span class="nn">"Optional title"</span><span class="p">)</span>
+
+<span class="p">![</span><span class="nv">Alt text</span><span class="p">](</span><span class="sx">image-url.jpg</span><span class="p">)</span>
+<span class="p">![</span><span class="nv">Alt text</span><span class="p">](</span><span class="sx">image-url.jpg</span> <span class="nn">"Optional title"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="code-blocks">Code Blocks</h2>
+<p>Use fenced code blocks with language specification for syntax highlighting:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">js
+</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hello, Markdown!</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+```markdown
+```html
+&lt;div class="container"&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+```markdown
+```css
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## Tables
+```markdown
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Row 1    | Data     | More     |
+| Row 2    | Data     | More     |
+</code></pre></div></div>
+
+<h2 id="github-specific-features">GitHub-Specific Features</h2>
+
+<h3 id="task-lists">Task Lists</h3>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> [x] Completed task
+<span class="p">-</span> [ ] Incomplete task
+<span class="p">-</span> [ ] Another task
+</code></pre></div></div>
+
+<h3 id="emoji">Emoji</h3>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:smile: :heart: :thumbsup: :rocket:
+</code></pre></div></div>
+
+<h3 id="mentions-and-references">Mentions and References</h3>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@username
+<span class="gh">#123 (issue reference)</span>
+SHA: a5c3785ed8d6a35868bc169f07e40e889087fd2e
+</code></pre></div></div>
+
+<h2 id="readme-best-practices">README Best Practices</h2>
+<ul>
+  <li>Keep it concise and helpful</li>
+  <li>Include project description</li>
+  <li>Add installation instructions</li>
+  <li>Provide usage examples</li>
+  <li>Include contribution guidelines</li>
+  <li>Add license information</li>
+</ul>
+
+<h2 id="example-readme-structure">Example README Structure</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Project Title</span>
+
+Brief description of your project.
+
+<span class="gu">## Installation</span>
+Steps to install and set up the project.
+
+<span class="gu">## Usage</span>
+How to use the project with examples.
+
+<span class="gu">## Contributing</span>
+Guidelines for contributing to the project.
+
+<span class="gu">## License</span>
+License information.
+</code></pre></div></div>
+
+    </div>
+
+    <hr class="my-4">
+    
+    <div class="row">
+        <div class="col-md-6">
+            <h5>More Resources</h5>
+            
+            
+            <a href="/dev-book/resources/ergonomics/" class="d-block mb-2">🧠 Ergonomics & Well-Being</a>
+            
+            <a href="/dev-book/resources/keyboard-shortcuts/" class="d-block mb-2">⌨️ Keyboard Shortcuts</a>
+            
+            <a href="/dev-book/resources/nato-phonetic/" class="d-block mb-2">🔤 NATO Phonetic & Disambiguation</a>
+            
+        </div>
+        <div class="col-md-6">
+            <h5>Quick Links</h5>
+            <a href="/dev-book/assignments/" class="d-block mb-2">View Assignments</a>
+            <a href="/dev-book/lessons/" class="d-block mb-2">Browse Lessons</a>
+            <a href="/dev-book/syllabus/" class="d-block mb-2">Course Syllabus</a>
+        </div>
+    </div>
+</article>
+
+    </main>
+
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>CIS 376 - Web Development</h6>
+                    <p class="mb-0">Barry Cumbie, Ph.D.</p>
+                    <p class="mb-0">Fall 2025</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">MW 9:30–10:45 (C&M 215)</p>
+                    <p class="mb-0">
+                        <a href="mailto:bcumbie@una.edu">bcumbie@una.edu</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

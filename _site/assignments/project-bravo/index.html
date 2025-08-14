@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇧 Project Bravo — Web Game | CIS 376 Web Development</title>
+    <meta name="description" content="📌 Overview Build a small web game (matching/drag/flip/memory/quiz). Use arrays/objects, randomization, events, and track player progress with a polished user...">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/dev-book/assets/css/main.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>🇧 Project Bravo — Web Game | CIS 376 Web Development</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="🇧 Project Bravo — Web Game" />
+<meta name="author" content="Barry Cumbie, Ph.D." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="📌 Overview Build a small web game (matching/drag/flip/memory/quiz). Use arrays/objects, randomization, events, and track player progress with a polished user interface." />
+<meta property="og:description" content="📌 Overview Build a small web game (matching/drag/flip/memory/quiz). Use arrays/objects, randomization, events, and track player progress with a polished user interface." />
+<link rel="canonical" href="http://localhost:4000/dev-book/assignments/project-bravo/" />
+<meta property="og:url" content="http://localhost:4000/dev-book/assignments/project-bravo/" />
+<meta property="og:site_name" content="CIS 376 Web Development" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-14T10:48:04-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="🇧 Project Bravo — Web Game" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Barry Cumbie, Ph.D."},"dateModified":"2025-08-14T10:48:04-05:00","datePublished":"2025-08-14T10:48:04-05:00","description":"📌 Overview Build a small web game (matching/drag/flip/memory/quiz). Use arrays/objects, randomization, events, and track player progress with a polished user interface.","headline":"🇧 Project Bravo — Web Game","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/dev-book/assignments/project-bravo/"},"url":"http://localhost:4000/dev-book/assignments/project-bravo/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/dev-book/">
+                <i class="fas fa-code me-2"></i>CIS 376
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/syllabus/">Syllabus</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/calendar/">Calendar</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/assignments/">Assignments</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/lessons/">Lessons</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/resources/">Resources</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/exams/">Exams</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <div class="row">
+    <div class="col-lg-8">
+        <article class="assignment-content">
+            <div class="d-flex justify-content-between align-items-start mb-4">
+                <div>
+                    <h1 class="mb-1">🇧 Project Bravo — Web Game</h1>
+                    
+                    <p class="text-muted fs-5">Build an interactive web-based game</p>
+                    
+                </div>
+                
+                <div class="badge bg-primary fs-6">100 points</div>
+                
+            </div>
+
+            
+            <div class="alert alert-info">
+                <div class="row">
+                    
+                    <div class="col-md-4">
+                        <strong>Points:</strong> 100
+                    </div>
+                    
+                    
+                    <div class="col-md-4">
+                        <strong>Due:</strong> End of Week 6
+                    </div>
+                    
+                    
+                    <div class="col-md-4">
+                        <strong>Submit:</strong> Repo URL (Pages deployed)
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            <div class="content">
+                <h2 id="-overview">📌 Overview</h2>
+<p>Build a small <strong>web game</strong> (matching/drag/flip/memory/quiz). Use arrays/objects, randomization, events, and track player progress with a polished user interface.</p>
+
+<h2 id="-objectives">🎯 Objectives</h2>
+<ul>
+  <li>DOM manipulation in response to user <strong>events</strong></li>
+  <li><strong>Array of objects</strong> for game data + <strong>randomization</strong></li>
+  <li>UI polish (Bootstrap/jQuery UI) and clear instructions</li>
+  <li>Game state management and progress tracking</li>
+</ul>
+
+<h2 id="-requirements">🧭 Requirements</h2>
+
+<h3 id="game-options">Game Options</h3>
+<p>Choose one of these game types (or propose your own):</p>
+<ul>
+  <li><strong>Memory/Matching Game</strong> - Flip cards to find pairs</li>
+  <li><strong>Drag &amp; Drop Puzzle</strong> - Arrange pieces to complete an image</li>
+  <li><strong>Quiz Game</strong> - Multiple choice with scoring and feedback</li>
+  <li><strong>Word Game</strong> - Hangman, word scramble, or similar</li>
+  <li><strong>Simple Arcade</strong> - Snake, Tetris-style, or reaction game</li>
+</ul>
+
+<h3 id="technical-requirements">Technical Requirements</h3>
+
+<h4 id="core-functionality">Core Functionality</h4>
+<ul>
+  <li><strong>User greeting</strong> and name collection</li>
+  <li><strong>Clear instructions</strong> displayed prominently</li>
+  <li><strong>Progress tracking</strong> (score, lives, level, etc.)</li>
+  <li><strong>Reset/restart</strong> functionality</li>
+  <li><strong>Randomization</strong> of game elements</li>
+  <li><strong>Win/lose conditions</strong> with appropriate feedback</li>
+</ul>
+
+<h4 id="data-structure">Data Structure</h4>
+<ul>
+  <li>Use <strong>arrays of objects</strong> to store game data</li>
+  <li>Implement proper data organization</li>
+  <li>Handle game state effectively</li>
+</ul>
+
+<h4 id="user-interface">User Interface</h4>
+<ul>
+  <li>Responsive design using Bootstrap</li>
+  <li>At least <strong>one UI enhancement</strong>:
+    <ul>
+      <li>Drag and drop functionality</li>
+      <li>Card flip animations</li>
+      <li>Modal dialogs</li>
+      <li>Progress bars</li>
+      <li>Sound effects</li>
+      <li>Particle effects</li>
+    </ul>
+  </li>
+  <li>Clear visual feedback for user actions</li>
+  <li>Professional styling and layout</li>
+</ul>
+
+<h4 id="code-quality">Code Quality</h4>
+<ul>
+  <li>Well-organized JavaScript functions</li>
+  <li>Proper event handling</li>
+  <li>Error handling and validation</li>
+  <li>Comprehensive comments</li>
+  <li>Clean, readable code structure</li>
+</ul>
+
+<h3 id="project-structure">Project Structure</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>project-bravo/
+├── index.html
+├── README.md
+├── scripts/
+│   ├── game.js
+│   ├── data.js
+│   └── ui.js
+├── styles/
+│   └── game.css
+├── images/
+│   ├── wireframe.png
+│   ├── screenshot.png
+│   └── game-assets/
+└── sounds/ (optional)
+    └── game-sounds/
+</code></pre></div></div>
+
+<h3 id="documentation">Documentation</h3>
+<ul>
+  <li><strong>Wireframe</strong> saved in <code class="language-plaintext highlighter-rouge">/images</code> and linked in README</li>
+  <li><strong>Screenshot</strong> of completed game</li>
+  <li>Comprehensive README including:
+    <ul>
+      <li>Game description and rules</li>
+      <li>Technologies used</li>
+      <li>Setup instructions</li>
+      <li>Credits for any assets used</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="integration">Integration</h3>
+<ul>
+  <li><strong>Footer links</strong> to:
+    <ul>
+      <li>Your Dev Profile (Project Alpha)</li>
+      <li>Source code repository</li>
+      <li>Nu HTML Validator results</li>
+      <li>WAVE accessibility results</li>
+    </ul>
+  </li>
+  <li><strong>Update Dev Profile</strong> with:
+    <ul>
+      <li>Screenshot of the game</li>
+      <li>Link to live game</li>
+      <li>Brief description in projects section</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="-submission-checklist">📑 Submission Checklist</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Repository is public</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />GitHub Pages is live and functional</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Game works without errors</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />README is complete with all required information</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Wireframe is uploaded and linked</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Screenshot is included</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />All footer validation links work</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Dev Profile is updated with game link</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Game includes all required functionality</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />UI enhancement is implemented</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Code is well-commented and organized</li>
+</ul>
+
+<h2 id="-game-ideas--inspiration">💡 Game Ideas &amp; Inspiration</h2>
+
+<h3 id="memory-game">Memory Game</h3>
+<ul>
+  <li>Grid of cards that flip to reveal images</li>
+  <li>Player finds matching pairs</li>
+  <li>Track time and number of moves</li>
+  <li>Multiple difficulty levels</li>
+</ul>
+
+<h3 id="drag--drop-puzzle">Drag &amp; Drop Puzzle</h3>
+<ul>
+  <li>Image split into pieces</li>
+  <li>Player drags pieces to correct positions</li>
+  <li>Snap-to-grid functionality</li>
+  <li>Progress indicator</li>
+</ul>
+
+<h3 id="quiz-game">Quiz Game</h3>
+<ul>
+  <li>Multiple choice questions</li>
+  <li>Score tracking</li>
+  <li>Timer (optional)</li>
+  <li>Question randomization</li>
+  <li>Feedback for correct/incorrect answers</li>
+</ul>
+
+<h3 id="word-game">Word Game</h3>
+<ul>
+  <li>Hangman with visual gallows</li>
+  <li>Word scramble with hints</li>
+  <li>Letter guessing with alphabet display</li>
+  <li>Category-based words</li>
+</ul>
+
+<h2 id="-ui-enhancement-ideas">🎨 UI Enhancement Ideas</h2>
+<ul>
+  <li><strong>Animations</strong>: CSS transitions, keyframes</li>
+  <li><strong>Drag &amp; Drop</strong>: HTML5 drag API or library</li>
+  <li><strong>Modals</strong>: Bootstrap modals for instructions/results</li>
+  <li><strong>Progress Bars</strong>: Visual progress indicators</li>
+  <li><strong>Sound Effects</strong>: Audio feedback for actions</li>
+  <li><strong>Particle Effects</strong>: Celebration animations</li>
+  <li><strong>Responsive Gestures</strong>: Touch/swipe on mobile</li>
+</ul>
+
+<h2 id="-rubric">📊 Rubric</h2>
+<p>See <a href="/dev-book/assignments/rubrics/bravo-rubric">Bravo Rubric</a> for detailed grading criteria.</p>
+
+<h2 id="-helpful-resources">🔗 Helpful Resources</h2>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">JavaScript Array Methods</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">DOM Event Handling</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a></li>
+  <li><a href="https://getbootstrap.com/docs/5.0/components/">Bootstrap Components</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML5 Drag and Drop</a></li>
+</ul>
+
+            </div>
+
+            
+            <div class="mt-4">
+                <h3>Rubric</h3>
+                <a href="/dev-book/assignments/rubrics/bravo-rubric" class="btn btn-outline-primary">
+                    <i class="fas fa-clipboard-check me-2"></i>View Rubric
+                </a>
+            </div>
+            
+        </article>
+    </div>
+    
+    <div class="col-lg-4">
+        <aside class="assignment-sidebar">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-tasks me-2"></i>Assignment Info</h5>
+                </div>
+                <div class="card-body">
+                    
+                    <p><strong>Difficulty:</strong> 
+                        
+                            
+                                <i class="fas fa-star text-warning"></i>
+                            
+                        
+                            
+                                <i class="fas fa-star text-warning"></i>
+                            
+                        
+                            
+                                <i class="fas fa-star text-warning"></i>
+                            
+                        
+                            
+                                <i class="fas fa-star text-warning"></i>
+                            
+                        
+                            
+                                <i class="far fa-star text-muted"></i>
+                            
+                        
+                    </p>
+                    
+                    
+                    
+                    <p><strong>Technologies:</strong></p>
+                    <ul class="list-unstyled">
+                        
+                        <li><span class="badge bg-secondary me-1">JavaScript</span></li>
+                        
+                        <li><span class="badge bg-secondary me-1">DOM Manipulation</span></li>
+                        
+                        <li><span class="badge bg-secondary me-1">Arrays & Objects</span></li>
+                        
+                        <li><span class="badge bg-secondary me-1">Event Handling</span></li>
+                        
+                        <li><span class="badge bg-secondary me-1">Bootstrap/jQuery UI</span></li>
+                        
+                        <li><span class="badge bg-secondary me-1">GitHub Pages</span></li>
+                        
+                    </ul>
+                    
+                    
+                    
+                    <p><strong>Learning Objectives:</strong></p>
+                    <ul>
+                        
+                        <li>Implement complex DOM manipulation</li>
+                        
+                        <li>Work with arrays and objects for game data</li>
+                        
+                        <li>Handle user events and interactions</li>
+                        
+                        <li>Create engaging user interfaces</li>
+                        
+                        <li>Apply randomization and game logic</li>
+                        
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <!-- Related Assignments -->
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h6 class="mb-0">Other Assignments</h6>
+                </div>
+                <div class="card-body">
+                    
+                    
+                    <a href="/dev-book/assignments/onboarding/" class="d-block text-decoration-none mb-2">
+                        🚀 Onboarding
+                    </a>
+                    
+                    <a href="/dev-book/assignments/project-alpha/" class="d-block text-decoration-none mb-2">
+                        🇦 Project Alpha — Developer Profile
+                    </a>
+                    
+                    <a href="/dev-book/assignments/project-charlie/" class="d-block text-decoration-none mb-2">
+                        🇨 Project Charlie — Blog + Data Integration
+                    </a>
+                    
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+
+    </main>
+
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>CIS 376 - Web Development</h6>
+                    <p class="mb-0">Barry Cumbie, Ph.D.</p>
+                    <p class="mb-0">Fall 2025</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">MW 9:30–10:45 (C&M 215)</p>
+                    <p class="mb-0">
+                        <a href="mailto:bcumbie@una.edu">bcumbie@una.edu</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

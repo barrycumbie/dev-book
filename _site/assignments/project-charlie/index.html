@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇨 Project Charlie — Blog + Data Integration | CIS 376 Web Development</title>
+    <meta name="description" content="📌 Overview Create a sophisticated blog system by splitting functionality across three repositories: Data Repository - JSON data served via GitHub Pages Blog ...">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/dev-book/assets/css/main.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>🇨 Project Charlie — Blog + Data Integration | CIS 376 Web Development</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="🇨 Project Charlie — Blog + Data Integration" />
+<meta name="author" content="Barry Cumbie, Ph.D." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="📌 Overview Create a sophisticated blog system by splitting functionality across three repositories: Data Repository - JSON data served via GitHub Pages Blog Admin - Administrative interface for managing posts Developer Profile - Updated to fetch and display blog data" />
+<meta property="og:description" content="📌 Overview Create a sophisticated blog system by splitting functionality across three repositories: Data Repository - JSON data served via GitHub Pages Blog Admin - Administrative interface for managing posts Developer Profile - Updated to fetch and display blog data" />
+<link rel="canonical" href="http://localhost:4000/dev-book/assignments/project-charlie/" />
+<meta property="og:url" content="http://localhost:4000/dev-book/assignments/project-charlie/" />
+<meta property="og:site_name" content="CIS 376 Web Development" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-14T10:48:04-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="🇨 Project Charlie — Blog + Data Integration" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Barry Cumbie, Ph.D."},"dateModified":"2025-08-14T10:48:04-05:00","datePublished":"2025-08-14T10:48:04-05:00","description":"📌 Overview Create a sophisticated blog system by splitting functionality across three repositories: Data Repository - JSON data served via GitHub Pages Blog Admin - Administrative interface for managing posts Developer Profile - Updated to fetch and display blog data","headline":"🇨 Project Charlie — Blog + Data Integration","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/dev-book/assignments/project-charlie/"},"url":"http://localhost:4000/dev-book/assignments/project-charlie/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/dev-book/">
+                <i class="fas fa-code me-2"></i>CIS 376
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/syllabus/">Syllabus</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/calendar/">Calendar</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/assignments/">Assignments</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/lessons/">Lessons</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/resources/">Resources</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                           href="/dev-book/exams/">Exams</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <div class="row">
+    <div class="col-lg-8">
+        <article class="assignment-content">
+            <div class="d-flex justify-content-between align-items-start mb-4">
+                <div>
+                    <h1 class="mb-1">🇨 Project Charlie — Blog + Data Integration</h1>
+                    
+                    <p class="text-muted fs-5">Build a data-driven blog with API integration</p>
+                    
+                </div>
+                
+                <div class="badge bg-primary fs-6">100 points</div>
+                
+            </div>
+
+            
+            <div class="alert alert-info">
+                <div class="row">
+                    
+                    <div class="col-md-4">
+                        <strong>Points:</strong> 100
+                    </div>
+                    
+                    
+                    <div class="col-md-4">
+                        <strong>Due:</strong> End of Week 9
+                    </div>
+                    
+                    
+                    <div class="col-md-4">
+                        <strong>Submit:</strong> Link to Dev Profile (links out to Admin & Data)
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            <div class="content">
+                <h2 id="-overview">📌 Overview</h2>
+<p>Create a sophisticated blog system by splitting functionality across three repositories:</p>
+<ul>
+  <li><strong>Data Repository</strong> - JSON data served via GitHub Pages</li>
+  <li><strong>Blog Admin</strong> - Administrative interface for managing posts</li>
+  <li><strong>Developer Profile</strong> - Updated to fetch and display blog data</li>
+</ul>
+
+<p>This project demonstrates real-world patterns of separating data, administration, and presentation layers.</p>
+
+<h2 id="-project-architecture">🧭 Project Architecture</h2>
+
+<h3 id="three-repository-structure">Three-Repository Structure</h3>
+<ol>
+  <li><strong>Data Repository</strong> (<code class="language-plaintext highlighter-rouge">project-charlie-data</code>)
+    <ul>
+      <li>Contains JSON files with blog posts</li>
+      <li>Served via GitHub Pages as a simple API</li>
+      <li>Strict JSON format with validation</li>
+    </ul>
+  </li>
+  <li><strong>Admin Repository</strong> (<code class="language-plaintext highlighter-rouge">project-charlie-admin</code>)
+    <ul>
+      <li>Administrative interface for blog management</li>
+      <li>Fetch, display, add, edit, delete posts (temporary)</li>
+      <li>Bootstrap 5 components for professional UI</li>
+    </ul>
+  </li>
+  <li><strong>Developer Profile</strong> (Updated from Project Alpha)
+    <ul>
+      <li>Fetches JSON data from data repository</li>
+      <li>Displays blog posts dynamically</li>
+      <li>Links to admin interface</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="-requirements">🎯 Requirements</h2>
+
+<h3 id="data-repository-requirements">Data Repository Requirements</h3>
+<ul>
+  <li><strong>JSON Structure</strong>: Consistent post format
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"posts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Post Title"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-08-14"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Your Name"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"excerpt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brief description..."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full post content..."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"web-dev"</span><span class="p">,</span><span class="w"> </span><span class="s2">"javascript"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"published"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li><strong>README Documentation</strong>: API endpoints and usage</li>
+  <li><strong>Direct JSON Access</strong>: Working GitHub Pages URL</li>
+  <li><strong>Minimum 5 sample posts</strong> with realistic content</li>
+</ul>
+
+<h3 id="admin-interface-requirements">Admin Interface Requirements</h3>
+<ul>
+  <li><strong>Data Fetching</strong>: Load posts from JSON API</li>
+  <li><strong>Display Posts</strong>: List view with post previews</li>
+  <li><strong>CRUD Operations</strong> (temporary - not persistent):
+    <ul>
+      <li><strong>Create</strong>: Add new posts via form</li>
+      <li><strong>Read</strong>: Display individual posts</li>
+      <li><strong>Update</strong>: Edit existing posts</li>
+      <li><strong>Delete</strong>: Remove posts from display</li>
+    </ul>
+  </li>
+  <li><strong>Bootstrap 5 Components</strong>:
+    <ul>
+      <li>Navigation</li>
+      <li>Forms</li>
+      <li>Cards/Lists</li>
+      <li>Modals (optional)</li>
+      <li>Alerts for user feedback</li>
+    </ul>
+  </li>
+  <li><strong>Error Handling</strong>: Graceful handling of fetch failures</li>
+  <li><strong>Responsive Design</strong>: Works on all device sizes</li>
+</ul>
+
+<h3 id="developer-profile-integration">Developer Profile Integration</h3>
+<ul>
+  <li><strong>Fetch Integration</strong>: Pull blog data from JSON API</li>
+  <li><strong>Dynamic Display</strong>: Show recent posts in blog section</li>
+  <li><strong>Admin Link</strong>: Button/link to admin interface</li>
+  <li><strong>Error Handling</strong>: Fallback if API is unavailable</li>
+  <li><strong>Loading States</strong>: Show loading indicators during fetch</li>
+</ul>
+
+<h3 id="technical-specifications">Technical Specifications</h3>
+<ul>
+  <li><strong>JSON Validation</strong>: All JSON must be valid</li>
+  <li><strong>Error Handling</strong>: Proper try/catch for async operations</li>
+  <li><strong>Code Organization</strong>: Separate files for different concerns</li>
+  <li><strong>Documentation</strong>: Comments explaining fetch operations</li>
+  <li><strong>Performance</strong>: Efficient data loading and display</li>
+</ul>
+
+<h2 id="-project-structure">📁 Project Structure</h2>
+
+<h3 id="data-repository">Data Repository</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>project-charlie-data/
+├── index.html (redirect to JSON)
+├── README.md
+├── posts.json
+├── authors.json (optional)
+└── api/
+    └── v1/
+        └── posts.json
+</code></pre></div></div>
+
+<h3 id="admin-repository">Admin Repository</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>project-charlie-admin/
+├── index.html
+├── README.md
+├── scripts/
+│   ├── admin.js
+│   ├── api.js
+│   └── ui.js
+├── styles/
+│   └── admin.css
+└── images/
+    └── wireframe.png
+</code></pre></div></div>
+
+<h2 id="-submission-process">📑 Submission Process</h2>
+
+<h3 id="step-1-data-repository">Step 1: Data Repository</h3>
+<ol>
+  <li>Create public repository</li>
+  <li>Set up GitHub Pages</li>
+  <li>Create valid JSON with sample posts</li>
+  <li>Test direct JSON access</li>
+  <li>Document API in README</li>
+</ol>
+
+<h3 id="step-2-admin-interface">Step 2: Admin Interface</h3>
+<ol>
+  <li>Create admin repository</li>
+  <li>Implement fetch from data API</li>
+  <li>Build CRUD interface</li>
+  <li>Style with Bootstrap 5</li>
+  <li>Deploy via GitHub Pages</li>
+</ol>
+
+<h3 id="step-3-profile-integration">Step 3: Profile Integration</h3>
+<ol>
+  <li>Update Project Alpha (Dev Profile)</li>
+  <li>Add fetch functionality to blog section</li>
+  <li>Link to admin interface</li>
+  <li>Test integration end-to-end</li>
+</ol>
+
+<h3 id="step-4-documentation">Step 4: Documentation</h3>
+<ol>
+  <li>Create wireframe for admin interface</li>
+  <li>Update all README files</li>
+  <li>Add validation links to footers</li>
+  <li>Test all live links</li>
+</ol>
+
+<h2 id="-submission-checklist">📑 Submission Checklist</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Data repository is public with working JSON API</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Admin interface deployed and functional</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Developer Profile updated with fetch integration</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />All three repositories linked properly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Wireframe created and linked</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />README files complete in all repositories</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />JSON validates successfully</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Fetch operations work correctly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Bootstrap components implemented</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />All validation links work</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Error handling implemented</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Responsive design confirmed</li>
+</ul>
+
+<h2 id="-development-tips">💡 Development Tips</h2>
+
+<h3 id="json-best-practices">JSON Best Practices</h3>
+<ul>
+  <li>Use consistent property names</li>
+  <li>Include metadata (dates, IDs, authors)</li>
+  <li>Validate JSON before committing</li>
+  <li>Keep file sizes reasonable</li>
+</ul>
+
+<h3 id="fetch-api-tips">Fetch API Tips</h3>
+<ul>
+  <li>Always use try/catch blocks</li>
+  <li>Check response.ok before parsing</li>
+  <li>Provide user feedback during loading</li>
+  <li>Cache data when appropriate</li>
+</ul>
+
+<h3 id="admin-interface-ux">Admin Interface UX</h3>
+<ul>
+  <li>Clear navigation between functions</li>
+  <li>Form validation and feedback</li>
+  <li>Confirmation for destructive actions</li>
+  <li>Keyboard shortcuts for power users</li>
+</ul>
+
+<h3 id="error-handling">Error Handling</h3>
+<ul>
+  <li>Network failures</li>
+  <li>Invalid JSON responses</li>
+  <li>Missing data properties</li>
+  <li>User input validation</li>
+</ul>
+
+<h2 id="-testing-checklist">🔍 Testing Checklist</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />JSON API accessible via direct URL</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Admin interface loads without errors</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />All CRUD operations work</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Profile fetches and displays data</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Links between repositories work</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Error handling functions properly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Responsive on mobile and desktop</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Validation tools return clean results</li>
+</ul>
+
+<h2 id="-rubric">📊 Rubric</h2>
+<p>See <a href="/dev-book/assignments/rubrics/charlie-rubric">Charlie Rubric</a> for detailed grading criteria.</p>
+
+<h2 id="-helpful-resources">🔗 Helpful Resources</h2>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API Documentation</a></li>
+  <li><a href="https://jsonlint.com/">JSON Validation Tools</a></li>
+  <li><a href="https://docs.github.com/en/pages">GitHub Pages Setup</a></li>
+  <li><a href="https://getbootstrap.com/docs/5.0/forms/overview/">Bootstrap 5 Forms</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Async/Await in JavaScript</a></li>
+</ul>
+
+            </div>
+
+            
+            <div class="mt-4">
+                <h3>Rubric</h3>
+                <a href="/dev-book/assignments/rubrics/charlie-rubric" class="btn btn-outline-primary">
+                    <i class="fas fa-clipboard-check me-2"></i>View Rubric
+                </a>
+            </div>
+            
+        </article>
+    </div>
+    
+    <div class="col-lg-4">
+        <aside class="assignment-sidebar">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-tasks me-2"></i>Assignment Info</h5>
+                </div>
+                <div class="card-body">
+                    
+                    <p><strong>Difficulty:</strong> 
+                        
+                            
+                                <i class="fas fa-star text-warning"></i>
+                            
+                        
+                            
+                                <i class="fas fa-star text-warning"></i>
+                            
+                        
+                            
+                                <i class="fas fa-star text-warning"></i>
+                            
+                        
+                            
+                                <i class="fas fa-star text-warning"></i>
+                            
+                        
+                            
+                                <i class="fas fa-star text-warning"></i>
+                            
+                        
+                    </p>
+                    
+                    
+                    
+                    <p><strong>Technologies:</strong></p>
+                    <ul class="list-unstyled">
+                        
+                        <li><span class="badge bg-secondary me-1">JSON</span></li>
+                        
+                        <li><span class="badge bg-secondary me-1">Fetch API</span></li>
+                        
+                        <li><span class="badge bg-secondary me-1">CRUD Operations</span></li>
+                        
+                        <li><span class="badge bg-secondary me-1">GitHub Pages</span></li>
+                        
+                        <li><span class="badge bg-secondary me-1">Data Management</span></li>
+                        
+                        <li><span class="badge bg-secondary me-1">RESTful Concepts</span></li>
+                        
+                    </ul>
+                    
+                    
+                    
+                    <p><strong>Learning Objectives:</strong></p>
+                    <ul>
+                        
+                        <li>Separate data from presentation</li>
+                        
+                        <li>Implement fetch API for data retrieval</li>
+                        
+                        <li>Create administrative interface</li>
+                        
+                        <li>Understand JSON data structures</li>
+                        
+                        <li>Practice API integration patterns</li>
+                        
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <!-- Related Assignments -->
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h6 class="mb-0">Other Assignments</h6>
+                </div>
+                <div class="card-body">
+                    
+                    
+                    <a href="/dev-book/assignments/onboarding/" class="d-block text-decoration-none mb-2">
+                        🚀 Onboarding
+                    </a>
+                    
+                    <a href="/dev-book/assignments/project-alpha/" class="d-block text-decoration-none mb-2">
+                        🇦 Project Alpha — Developer Profile
+                    </a>
+                    
+                    <a href="/dev-book/assignments/project-bravo/" class="d-block text-decoration-none mb-2">
+                        🇧 Project Bravo — Web Game
+                    </a>
+                    
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+
+    </main>
+
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>CIS 376 - Web Development</h6>
+                    <p class="mb-0">Barry Cumbie, Ph.D.</p>
+                    <p class="mb-0">Fall 2025</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">MW 9:30–10:45 (C&M 215)</p>
+                    <p class="mb-0">
+                        <a href="mailto:bcumbie@una.edu">bcumbie@una.edu</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

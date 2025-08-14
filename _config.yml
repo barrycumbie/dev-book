@@ -1,0 +1,105 @@
+# Jekyll Configuration for CIS 376 Web Development Course
+
+# Site settings
+title: "CIS 376 Web Development"
+description: "Course content, assignments, rubrics, and resources for CIS 376 Web Development"
+author: "Barry Cumbie, Ph.D."
+email: "bcumbie@una.edu"
+baseurl: "/dev-book" # Change this to your repo name
+url: "https://barrycumbie.github.io" # Change this to your GitHub Pages URL
+
+# Course specific settings
+course:
+  number: "CIS 376"
+  name: "Web Development"
+  term: "Fall 2025"
+  meeting_times: "MW 9:30–10:45 (C&M 215)"
+  start_date: "Aug 20, 2025"
+  end_date: "Dec 10, 2025"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections for course content
+collections:
+  assignments:
+    output: true
+    permalink: /:collection/:name/
+  lessons:
+    output: true
+    permalink: /:collection/:name/
+  resources:
+    output: true
+    permalink: /:collection/:name/
+  exams:
+    output: true
+    permalink: /:collection/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Barry Cumbie, Ph.D."
+  - scope:
+      path: ""
+      type: "assignments"
+    values:
+      layout: "assignment"
+      category: "assignment"
+  - scope:
+      path: ""
+      type: "lessons"
+    values:
+      layout: "lesson"
+      category: "lesson"
+  - scope:
+      path: ""
+      type: "resources"
+    values:
+      layout: "resource"
+      category: "resource"
+  - scope:
+      path: ""
+      type: "exams"
+    values:
+      layout: "exam"
+      category: "exam"
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Syllabus"
+    url: "/syllabus/"
+  - title: "Calendar"
+    url: "/calendar/"
+  - title: "Assignments"
+    url: "/assignments/"
+  - title: "Lessons"
+    url: "/lessons/"
+  - title: "Resources"
+    url: "/resources/"
+  - title: "Exams"
+    url: "/exams/"
+
+# Exclude files from Jekyll build
+exclude:
+  - book.json
+  - SUMMARY.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata

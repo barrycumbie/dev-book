@@ -1,0 +1,112 @@
+---
+layout: default
+---
+
+<div class="row">
+    <div class="col-lg-8">
+        <article class="assignment-content">
+            <div class="d-flex justify-content-between align-items-start mb-4">
+                <div>
+                    <h1 class="mb-1">{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <p class="text-muted fs-5">{{ page.subtitle }}</p>
+                    {% endif %}
+                </div>
+                {% if page.points %}
+                <div class="badge bg-primary fs-6">{{ page.points }} points</div>
+                {% endif %}
+            </div>
+
+            {% if page.due_date or page.points %}
+            <div class="alert alert-info">
+                <div class="row">
+                    {% if page.points %}
+                    <div class="col-md-4">
+                        <strong>Points:</strong> {{ page.points }}
+                    </div>
+                    {% endif %}
+                    {% if page.due_date %}
+                    <div class="col-md-4">
+                        <strong>Due:</strong> {{ page.due_date }}
+                    </div>
+                    {% endif %}
+                    {% if page.submit_format %}
+                    <div class="col-md-4">
+                        <strong>Submit:</strong> {{ page.submit_format }}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="content">
+                {{ content }}
+            </div>
+
+            {% if page.rubric %}
+            <div class="mt-4">
+                <h3>Rubric</h3>
+                <a href="{{ page.rubric | relative_url }}" class="btn btn-outline-primary">
+                    <i class="fas fa-clipboard-check me-2"></i>View Rubric
+                </a>
+            </div>
+            {% endif %}
+        </article>
+    </div>
+    
+    <div class="col-lg-4">
+        <aside class="assignment-sidebar">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-tasks me-2"></i>Assignment Info</h5>
+                </div>
+                <div class="card-body">
+                    {% if page.difficulty %}
+                    <p><strong>Difficulty:</strong> 
+                        {% for i in (1..5) %}
+                            {% if i <= page.difficulty %}
+                                <i class="fas fa-star text-warning"></i>
+                            {% else %}
+                                <i class="far fa-star text-muted"></i>
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+                    
+                    {% if page.technologies %}
+                    <p><strong>Technologies:</strong></p>
+                    <ul class="list-unstyled">
+                        {% for tech in page.technologies %}
+                        <li><span class="badge bg-secondary me-1">{{ tech }}</span></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    
+                    {% if page.objectives %}
+                    <p><strong>Learning Objectives:</strong></p>
+                    <ul>
+                        {% for objective in page.objectives %}
+                        <li>{{ objective }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Related Assignments -->
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h6 class="mb-0">Other Assignments</h6>
+                </div>
+                <div class="card-body">
+                    {% assign assignments = site.assignments | where_exp: "item", "item.url != page.url" %}
+                    {% for assignment in assignments limit:5 %}
+                    <a href="{{ assignment.url | relative_url }}" class="d-block text-decoration-none mb-2">
+                        {{ assignment.title }}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
