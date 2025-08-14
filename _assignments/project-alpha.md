@@ -1,26 +1,31 @@
 ---
 title: "🇦 Project Alpha — Developer Profile"
-subtitle: "Create a professional developer portfolio site"
-layout: assignment
-points: 100
-due_date: "End of Week 3"
-submit_format: "GitHub repo URL (Pages deployed)"
-difficulty: 3
-technologies:
-  - HTML5
-  - CSS3
-  - JavaScript
-  - Bootstrap 5
-  - GitHub Pages
-objectives:
-  - Deploy a static site with GitHub Pages
-  - Organize standard directory structure
-  - Use Bootstrap framework effectively
-  - Implement responsive design
-  - Document project with README and wireframe
-rubric: "/assignments/rubrics/alpha-rubric"
-order: 2
+layout: default
+parent: Assignments
+nav_order: 2
 ---
+
+# 🇦 Project Alpha — Developer Profile
+{: .no_toc }
+
+Create a professional developer portfolio site
+{: .fs-6 .fw-300 }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+## Overview
+
+**Points:** 100 • **Due:** End of Week 3 • **Submit:** GitHub repo URL (Pages deployed)
+
+**Difficulty:** ⭐⭐⭐☆☆
+
+**Technologies:** HTML5, CSS3, JavaScript, Bootstrap 5, GitHub Pages
 
 ## 📌 Overview
 Create a public **Developer Profile** site (GitHub Pages) with semantic HTML, responsive CSS, and a touch of JS.

@@ -1,23 +1,31 @@
 ---
 title: "🚀 Onboarding"
-subtitle: "Getting Started with CIS 376"
-layout: assignment
-points: 50
-due_date: "End of Week 2"
-submit_format: "GitHub Profile + Canvas Confirmation"
-difficulty: 2
-technologies:
-  - GitHub
-  - VS Code
-  - Markdown
-  - LinkedIn (optional)
-objectives:
-  - Set up development environment
-  - Learn Markdown fundamentals
-  - Understand course communication tools
-  - Configure professional profiles
-order: 1
+layout: default
+parent: Assignments
+nav_order: 1
 ---
+
+# 🚀 Onboarding
+{: .no_toc }
+
+Getting Started with CIS 376
+{: .fs-6 .fw-300 }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+## Overview
+
+**Points:** 50 • **Due:** End of Week 2 • **Submit:** GitHub Profile + Canvas Confirmation
+
+**Difficulty:** ⭐⭐☆☆☆
+
+**Technologies:** GitHub, VS Code, Markdown, LinkedIn (optional)
 
 ## Goals
 - Set up GitHub + (optional) LinkedIn

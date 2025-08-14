@@ -1,30 +1,109 @@
-# Jekyll Configuration for CIS 376 Web Development Course
+# Jekyll Configuration for Multi-Course Site
 
 # Site settings
-title: "CIS 376 Web Development"
-description: "Course content, assignments, rubrics, and resources for CIS 376 Web Development"
+title: "Dr. Cumbie's Courses"
+description: "Course content, assignments, and resources for CIS 376 Web Development and CIS 486 Capstone Projects"
 author: "Barry Cumbie, Ph.D."
 email: "bcumbie@una.edu"
 baseurl: "/dev-book" # Change this to your repo name
 url: "https://barrycumbie.github.io" # Change this to your GitHub Pages URL
 
-# Course specific settings
-course:
-  number: "CIS 376"
-  name: "Web Development"
+# Global instructor settings
+instructor:
+  name: "Barry Cumbie, Ph.D."
+  email: "bcumbie@una.edu"
+  office: "TBD"
+  office_hours: "TBD"
   term: "Fall 2025"
-  meeting_times: "MW 9:30–10:45 (C&M 215)"
-  start_date: "Aug 20, 2025"
-  end_date: "Dec 10, 2025"
+
+# Course configurations
+courses:
+  cis376:
+    number: "CIS 376"
+    name: "Web Development"
+    meeting_times: "MW 9:30–10:45 (C&M 215)"
+    start_date: "Aug 20, 2025"
+    end_date: "Dec 10, 2025"
+  cis486:
+    number: "CIS 486"
+    name: "Capstone Projects in IS"
+    meeting_times: "TBD"
+    start_date: "Aug 20, 2025"
+    end_date: "Dec 10, 2025"
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
+theme: just-the-docs
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+# Just the Docs theme configuration
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 2
+  preview_words_before: 3
+  preview_words_after: 3
+  tokenizer_separator: /[\s\-/]+/
+  rel_url: true
+  button: false
+
+# Enable or disable the site search
+# Supports true (default) or false
+search_enabled: true
+search:
+  # Split pages into sections that can be searched individually
+  # Supports 1 - 6, default: 2
+  heading_level: 2
+  # Maximum amount of previews per search result
+  # Default: 3
+  previews: 2
+  # Maximum amount of words to display before a matched word in the preview
+  # Default: 5
+  preview_words_before: 3
+  # Maximum amount of words to display after a matched word in the preview
+  # Default: 10
+  preview_words_after: 3
+  # Set the search token separator
+  # Default: /[\s\-/]+/
+  # Example: enable support for hyphenated search words
+  tokenizer_separator: /[\s\-/]+/
+  # Display the relative url in search results
+  # Supports true (default) or false
+  rel_url: true
+  # Enable or disable the search button that appears in the bottom right corner of every page
+  # Supports true or false (default)
+  button: false
+
+# For copy button on code
+enable_copy_code_button: true
+
+# Footer content
+# appears at the bottom of every page's main content
+footer_content: "Dr. Cumbie's Courses &copy; 2025 Barry Cumbie, Ph.D. | University of North Alabama"
+
+# Footer last edited timestamp
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/barrycumbie/dev-book" # the github URL for your repo
+gh_edit_branch: "jekyll" # the branch that your docs is served from
+# gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+# Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
+color_scheme: nil
+
+# Google Analytics Tracking (optional)
+# e.g, UA-1234567-89
+ga_tracking: 
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/false/nil)
 
 # Collections for course content
 collections:
@@ -40,56 +119,46 @@ collections:
   exams:
     output: true
     permalink: /:collection/:name/
+  courses:
+    output: true
+    permalink: /:collection/:name/
 
 # Default front matter
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: "pages"
     values:
-      layout: "post"
+      layout: "default"
       author: "Barry Cumbie, Ph.D."
   - scope:
       path: ""
       type: "assignments"
     values:
-      layout: "assignment"
+      layout: "default"
+      parent: "Assignments"
       category: "assignment"
   - scope:
       path: ""
       type: "lessons"
     values:
-      layout: "lesson"
+      layout: "default"
+      parent: "Lessons"
       category: "lesson"
   - scope:
       path: ""
       type: "resources"
     values:
-      layout: "resource"
+      layout: "default"
+      parent: "Resources"
       category: "resource"
   - scope:
       path: ""
       type: "exams"
     values:
-      layout: "exam"
+      layout: "default"
+      parent: "Exams"
       category: "exam"
-
-# Navigation
-navigation:
-  - title: "Home"
-    url: "/"
-  - title: "Syllabus"
-    url: "/syllabus/"
-  - title: "Calendar"
-    url: "/calendar/"
-  - title: "Assignments"
-    url: "/assignments/"
-  - title: "Lessons"
-    url: "/lessons/"
-  - title: "Resources"
-    url: "/resources/"
-  - title: "Exams"
-    url: "/exams/"
 
 # Exclude files from Jekyll build
 exclude:
@@ -103,3 +172,4 @@ exclude:
   - .sass-cache
   - .jekyll-cache
   - .jekyll-metadata
+  - README.md

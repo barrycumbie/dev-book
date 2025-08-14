@@ -1,1 +1,0 @@
-Place course images here (diagrams, screenshots, recipe graphic, etc.).

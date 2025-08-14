@@ -1,0 +1,163 @@
+{"0": {
+    "doc": "Assignments",
+    "title": "Course Assignments",
+    "content": "This course includes three major projects (Alpha, Bravo, Charlie) plus smaller assignments. Each project builds on previous skills while introducing new concepts. ",
+    "url": "/dev-book/assignments/#course-assignments",
+    
+    "relUrl": "/assignments/#course-assignments"
+  },"1": {
+    "doc": "Assignments",
+    "title": "Assignment Overview",
+    "content": "| Assignment | Description | Points | Due Date | . | Onboarding | Development environment setup | 50 | End of Week 2 | . | 🇦 Project Alpha | Developer Profile Site | 100 | End of Week 3 | . | 🇧 Project Bravo | Interactive Web Game | 100 | End of Week 6 | . | 🇨 Project Charlie | Blog + Data Integration | 100 | End of Week 9 | . ",
+    "url": "/dev-book/assignments/#assignment-overview",
+    
+    "relUrl": "/assignments/#assignment-overview"
+  },"2": {
+    "doc": "Assignments",
+    "title": "Getting Started",
+    "content": ". | Start with Onboarding - Set up your development environment | Read each assignment carefully - Pay attention to requirements and rubrics | Plan your work - Break projects into manageable tasks | Use available resources - Check the Resources section | Ask questions early - Don’t wait until the last minute | . ",
+    "url": "/dev-book/assignments/#getting-started",
+    
+    "relUrl": "/assignments/#getting-started"
+  },"3": {
+    "doc": "Assignments",
+    "title": "Assignments",
+    "content": " ",
+    "url": "/dev-book/assignments/",
+    
+    "relUrl": "/assignments/"
+  },"4": {
+    "doc": "Exams",
+    "title": "Course Exams",
+    "content": "This course includes a midterm and final exam to assess your understanding of web development concepts and practical skills. ",
+    "url": "/dev-book/exams/#course-exams",
+    
+    "relUrl": "/exams/#course-exams"
+  },"5": {
+    "doc": "Exams",
+    "title": "Exam Schedule",
+    "content": "| Exam | Date | Format | Coverage | . | Midterm | October 9 | In-person | Weeks 1-5 | . | Final | December 10 | In-person | Cumulative | . ",
+    "url": "/dev-book/exams/#exam-schedule",
+    
+    "relUrl": "/exams/#exam-schedule"
+  },"6": {
+    "doc": "Exams",
+    "title": "Exam Policies",
+    "content": ". | Format: Combination of multiple choice, short answer, and practical coding | Materials: Closed book, but reference cards may be provided | Make-up Policy: Contact instructor immediately if you miss an exam | Academic Integrity: All work must be your own | . ",
+    "url": "/dev-book/exams/#exam-policies",
+    
+    "relUrl": "/exams/#exam-policies"
+  },"7": {
+    "doc": "Exams",
+    "title": "Study Resources",
+    "content": ". | Review all assignment materials and project code | Practice with resources section materials | Attend review sessions (announced in class) | Use office hours for clarification on concepts | . ",
+    "url": "/dev-book/exams/#study-resources",
+    
+    "relUrl": "/exams/#study-resources"
+  },"8": {
+    "doc": "Exams",
+    "title": "Exams",
+    "content": " ",
+    "url": "/dev-book/exams/",
+    
+    "relUrl": "/exams/"
+  },"9": {
+    "doc": "Home",
+    "title": "CIS 376 — Web Development",
+    "content": "Front End Development • Fall 2025 . Welcome! This space hosts student-facing materials for CIS 376. Start with Onboarding, then work through Projects Alpha, Bravo, and Charlie, with quizzes and exams in between. Get Started with Onboarding View Syllabus . ",
+    "url": "/dev-book/#cis-376--web-development",
+    
+    "relUrl": "/#cis-376--web-development"
+  },"10": {
+    "doc": "Home",
+    "title": "Course Information",
+    "content": "Instructor: Barry Cumbie, Ph.D. Email: bcumbie@una.edu Term: Fall 2025 Meeting Times: MW 9:30–10:45 (C&amp;M 215) Total Class Days: 30 • Working Days: 72 . ",
+    "url": "/dev-book/#course-information",
+    
+    "relUrl": "/#course-information"
+  },"11": {
+    "doc": "Home",
+    "title": "Major Projects",
+    "content": "| Project | Description | Points | Status | . | 🇦 Alpha | Developer Profile Site | 100 | Available | . | 🇧 Bravo | Interactive Web Game | 100 | Available | . | 🇨 Charlie | Blog + Data Integration | 100 | Available | . ",
+    "url": "/dev-book/#major-projects",
+    
+    "relUrl": "/#major-projects"
+  },"12": {
+    "doc": "Home",
+    "title": "Key Dates",
+    "content": "| Date | Event | . | Aug 20 | Classes Start | . | Aug 27 | Add/Drop Ends | . | Oct 9 | Midterm Exam | . | Nov 24 | Last Withdraw | . | Dec 5–10 | Finals Week | . | Dec 10 | Classes End | . ",
+    "url": "/dev-book/#key-dates",
+    
+    "relUrl": "/#key-dates"
+  },"13": {
+    "doc": "Home",
+    "title": "Quick Links",
+    "content": ". | 📋 Assignments | 📚 Resources | 📝 Exams | 📅 Calendar | . ",
+    "url": "/dev-book/#quick-links",
+    
+    "relUrl": "/#quick-links"
+  },"14": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/dev-book/",
+    
+    "relUrl": "/"
+  },"15": {
+    "doc": "Resources",
+    "title": "Development Resources",
+    "content": "Essential Tools &amp; References . This collection includes essential tools, references, and best practices for web development. Bookmark these resources for quick access during projects. ⚙️ VS Code Tips . Development tools Essential VS Code setup and productivity tips . Essential Extensions Live Server - Local development server with live reload TODO Highlight - Highlight TODO comments in your code Prettier - Code formatter for... View Resource 📄 Markdown Basics . Documentation GitHub-Flavored Markdown essentials . What is Markdown? Markdown is a lightweight markup language that allows you to format text using simple syntax. GitHub uses a variant called GitHub-Flavored Markdown... View Resource 🔤 NATO Phonetic &amp; Disambiguation . Reference Clear communication and naming conventions . Why NATO Phonetic? We use NATO codes (Alpha, Bravo, …) to avoid confusion in verbal communication and project naming. Disambiguation Example Bit vs Byte: the... View Resource ⌨️ Keyboard Shortcuts . Productivity Essential shortcuts for productivity . Operating System &amp; Browser Shortcuts Universal (OS &amp; Browser) | Action | macOS | Windows/Linux |——–|——-|—————| Copy | ⌘+C | Ctrl+C |... View Resource 🧠 Ergonomics &amp; Well-Being . Health Healthy computing habits for developers . Physical Ergonomics Desk Setup Chair: Lumbar support, adjustable height, armrests Monitor: Top of screen at eye level, 20-26 inches away Keyboard: Wrists neutral, not bent... View Resource Development Tools . | VS Code Setup &amp; Tips | Keyboard Shortcuts | Bootstrap Documentation | MDN Web Docs | . Learning Materials . | Markdown Guide | NATO Phonetic Reference | Codecademy | freeCodeCamp | . Health &amp; Wellness . | Ergonomics &amp; Well-Being | f.lux (Blue Light Filter) | Workrave (Break Reminder) | . Need Help? . If you're looking for additional resources or have suggestions for this collection, reach out via email or during office hours. ",
+    "url": "/dev-book/resources/",
+    
+    "relUrl": "/resources/"
+  },"16": {
+    "doc": "Resources",
+    "title": "Resources",
+    "content": " ",
+    "url": "/dev-book/resources/",
+    
+    "relUrl": "/resources/"
+  },"17": {
+    "doc": "Syllabus",
+    "title": "📘 CIS 376 Syllabus",
+    "content": "Web Development • Fall 2025 . ",
+    "url": "/dev-book/syllabus/",
+    
+    "relUrl": "/syllabus/"
+  },"18": {
+    "doc": "Syllabus",
+    "title": "Course Information",
+    "content": "Instructor: Barry Cumbie, Ph.D. Email: bcumbie@una.edu . Meeting Times: MW 9:30–10:45 (C&amp;M 215) . Term: Fall 2025 . Office Hours: TBD (posted in Canvas) . Term Dates: Aug 20, 2025 – Dec 10, 2025 . ",
+    "url": "/dev-book/syllabus/",
+    
+    "relUrl": "/syllabus/"
+  },"19": {
+    "doc": "Syllabus",
+    "title": "Key Dates",
+    "content": ". | Add/Drop Deadline Aug 27 | Midterm Exam Oct 9 | Last Day to Withdraw Nov 24 | . | Finals Week Dec 5–10 | Classes End Dec 10 | . ",
+    "url": "/dev-book/syllabus/",
+    
+    "relUrl": "/syllabus/"
+  },"20": {
+    "doc": "Syllabus",
+    "title": "Course Overview",
+    "content": "CIS 376 Web Development introduces students to front-end web development technologies and practices. Students will learn HTML5, CSS3, JavaScript, and modern development workflows while building professional-quality web applications. Learning Objectives . | Master HTML5 semantic markup and accessibility principles | Create responsive layouts using CSS3 and Bootstrap framework | Implement interactive functionality with JavaScript and DOM manipulation | Develop professional development workflows using Git and GitHub | Deploy static websites using GitHub Pages | Apply web development best practices and industry standards | . ",
+    "url": "/dev-book/syllabus/",
+    
+    "relUrl": "/syllabus/"
+  },"21": {
+    "doc": "Syllabus",
+    "title": "Grading Overview",
+    "content": "| Component | Quantity | Points Each | Total Points | Percentage | . | Major Projects (Alpha, Bravo, Charlie) | 3 | 100 | 300 | 60% | . | Midterm Exam | 1 | 75 | 75 | 15% | . | Final Exam | 1 | 75 | 75 | 15% | . | Small Assignments &amp; CodeAcademy | Various | - | 50 | 10% | . | Total | - | - | 500 | 100% | . Grading Scale . | A 90-100% | B 80-89% | C 70-79% | . | D 60-69% | F Below 60% | . Quick Navigation . Course Policies Course Calendar Assignments Resources Important Links . | Canvas LMS | GitHub | Codecademy | Nu HTML Validator | WAVE Accessibility | . ",
+    "url": "/dev-book/syllabus/",
+    
+    "relUrl": "/syllabus/"
+  },"22": {
+    "doc": "Syllabus",
+    "title": "Syllabus",
+    "content": " ",
+    "url": "/dev-book/syllabus/",
+    
+    "relUrl": "/syllabus/"
+  }
+}

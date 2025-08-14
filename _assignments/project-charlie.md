@@ -1,7 +1,9 @@
 ---
-title: "🇨 Project Charlie — Blog + Data Integration"
-subtitle: "Build a data-driven blog with API integration"
-layout: assignment
+title: "🇨 Project Charlie — Full-Stack Web App"
+subtitle: "Build a complete web application with database"
+layout: default
+parent: Assignments
+nav_order: 4
 points: 100
 due_date: "End of Week 9"
 submit_format: "Link to Dev Profile (links out to Admin & Data)"
@@ -19,7 +21,7 @@ objectives:
   - Create administrative interface
   - Understand JSON data structures
   - Practice API integration patterns
-rubric: "/assignments/rubrics/charlie-rubric"
+rubric: "{% link _assignments/charlie-rubric.md %}"
 order: 4
 ---
 

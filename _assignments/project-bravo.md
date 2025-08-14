@@ -1,7 +1,9 @@
 ---
 title: "🇧 Project Bravo — Web Game"
 subtitle: "Build an interactive web-based game"
-layout: assignment
+layout: default
+parent: Assignments
+nav_order: 3
 points: 100
 due_date: "End of Week 6"
 submit_format: "Repo URL (Pages deployed)"
@@ -19,7 +21,7 @@ objectives:
   - Handle user events and interactions
   - Create engaging user interfaces
   - Apply randomization and game logic
-rubric: "/assignments/rubrics/bravo-rubric"
+rubric: "{% link _assignments/bravo-rubric.md %}"
 order: 3
 ---
 
