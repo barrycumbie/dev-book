@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<article class="lesson-content">
+    <div class="d-flex justify-content-between align-items-start mb-4">
+        <div>
+            <h1>{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <p class="lead">{{ page.subtitle }}</p>
+            {% endif %}
+        </div>
+        {% if page.week %}
+        <div class="badge bg-success fs-6">Week {{ page.week }}</div>
+        {% endif %}
+    </div>
+
+    {% if page.objectives %}
+    <div class="alert alert-primary">
+        <h5><i class="fas fa-bullseye me-2"></i>Learning Objectives</h5>
+        <ul class="mb-0">
+            {% for objective in page.objectives %}
+            <li>{{ objective }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <div class="content">
+        {{ content }}
+    </div>
+
+    {% if page.exercises %}
+    <div class="mt-4">
+        <h3><i class="fas fa-dumbbell me-2"></i>Practice Exercises</h3>
+        <div class="row">
+            {% for exercise in page.exercises %}
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-title">{{ exercise.title }}</h6>
+                        <p class="card-text">{{ exercise.description }}</p>
+                        {% if exercise.link %}
+                        <a href="{{ exercise.link }}" class="btn btn-sm btn-outline-primary">Try It</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</article>
